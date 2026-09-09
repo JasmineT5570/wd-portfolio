@@ -1,0 +1,74 @@
+* *::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    --blue-dark: oklch(16.43% 0.02019 265.766);
+    --blue-normal: oklch(44.291% 0.18106 262.657);
+    --blue-light: oklch(88.48% 0.05882 249.315);
+}
+
+header h1 {
+    text-align: center;
+    background-color: aqua;
+}
+
+.active {
+    border-bottom: blue solid 2px;
+}
+
+.header-name {
+    padding: 1em;
+}
+
+.header-name, nav ul li {
+    text-transform: uppercase;
+}
+
+body {
+    background-color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    margin: 0 auto;
+    background-color: lightblue;
+}
+
+nav {
+    text-transform: capitalize;
+    background-color: white;
+
+    a:link {text-decoration: none;}
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 1em;
+    justify-content: center;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    margin-top: auto;
+    background-color: lightskyblue;
+    padding: 1em;
+}
+
+.footer-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
