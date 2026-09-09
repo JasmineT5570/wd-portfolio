@@ -1,0 +1,1 @@
+<footer class="footer-style">&copy; 2026 - <?php echo date('Y'); ?> Jasmine </footer>
