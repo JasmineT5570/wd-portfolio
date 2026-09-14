@@ -79,20 +79,30 @@ else {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Jasmine | <?= $folder_name ?> </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+    <title> Jasmine | <?= $folder_name ?> </title>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <h1 class="header-name">Jasmine | <?= $folder_name ?> </h1>
-
             <nav>
                 <ul>
+                    <li><a href="/index.php">logo</a></li>
                     <li><a href="/index.php">home</a></li>
                     <li><a href="/portfolio/index.php">portfolio</a></li>
                     <li><a href="/about-me/index.php">about me</a></li>
                     <li><a href="/contact/index.php">contact</a></li>
                 </ul>
             </nav>
+
+            <section class="hero">
+                <div class="hero-overlay">
+                    <h1 class="fade-text"><?= $folder_name ?></h1>
+                    <p class="fade-text"><?= $hero_caption ?></p>
+                </div>
+            </section>
         </header>

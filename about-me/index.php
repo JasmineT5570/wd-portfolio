@@ -1,7 +1,13 @@
-<?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); ?>
+<?php 
+
+$hero_caption = "Hi, I'm Jasmine Thao.";
+
+include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); 
+
+?>
 
     <main>
-        <p>about me</p>
+        <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/cards.php"); ?>
     </main>
 
 <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/footer.php"); ?>

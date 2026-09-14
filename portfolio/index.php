@@ -1,7 +1,13 @@
-<?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); ?>
+<?php 
+
+$hero_caption = "Scroll down to view my past and current projects.";
+
+include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); 
+
+?>
 
     <main>
-        <p>portfolio</p>
+        <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/cards.php"); ?>
     </main>
 
 <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/footer.php"); ?>
