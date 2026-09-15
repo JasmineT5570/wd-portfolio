@@ -86,7 +86,7 @@ else {
     <title> Jasmine | <?= $folder_name ?> </title>
 </head>
 
-<body>
+<body id="top">
     <div class="wrapper">
         <header>
             <nav>
