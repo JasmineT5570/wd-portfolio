@@ -95,6 +95,7 @@ nav {
 }
 
 nav ul {
+    font-size: 10px;
     list-style-type: none;
     display: flex;
     gap: 20px;
@@ -105,7 +106,7 @@ nav ul {
 main {
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
 }
 
@@ -122,6 +123,7 @@ main {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .portfolio-card {
@@ -187,6 +189,7 @@ footer {
 
 /*CONTACT FORM CSS*/
 .container {
+    width: 100%;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -264,8 +267,16 @@ a:active {
 }
 
 @media screen and (min-width: 1024px) {
+.card-container {
+	flex-direction: row;
+} 
+    
 .container {
     margin: 0 20em;
+}
+    
+nav ul {
+	font-size: 20px;
 }
 }
 /*MEDIA END*/

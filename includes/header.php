@@ -30,7 +30,8 @@ if ($file_name === "index") {
 
 //Array of folder names and display names.
 $folder_names = [
-    "WD-Portfolio" => "Web Development Portfolio"
+    "WD-Portfolio" => "Digital Arts Showcase Portfolio",
+    "htdocs" => "Digital Arts Showcase Portfolio" //For InifintyFree, htdocs is the folder name.
 ];
 
 //Array of file names and display names.
