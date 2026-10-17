@@ -8,7 +8,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
 
     <main>
         <div class="container">
-            <form action="action_page.php" method="post">
+            <form action="contact-form.php" method="post">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your first name">
 
@@ -18,8 +18,10 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="email@example.com">
 
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Comments"></textarea>
+                <label for="comments">Subject</label>
+                <textarea id="comments" name="comments" placeholder="Comments"></textarea>
+
+                <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
                 <input type="submit" value="Submit">
             </form>

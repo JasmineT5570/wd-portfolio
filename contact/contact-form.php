@@ -11,7 +11,7 @@ if (!empty($_POST["website"])) {
 
 $firstname = trim(strip_tags($_POST["firstname"] ?? ""));
 $lastname = trim(strip_tags($_POST["lastname"] ?? ""));
-$email = trim(strip_tags($_POST["email"] ?? ""), FILTER_VALIDATE_EMAIL);
+$email = filter_var(trim($_POST["email"] ?? ""), FILTER_VALIDATE_EMAIL);
 $comments = trim(strip_tags($_POST["comments"] ?? ""));
 
 if (!$firstname || !$lastname || !$email || !$comments) {
@@ -24,8 +24,8 @@ $body = "First Name: $firstname $lastname\n"
                     . "Email: $email\n\n"
                     . "Comments:\n$comments\n"; 
 
-$headers = "From: noreply@infinityfree.com\r\n";
-$header .= "Reply-To: $email\r\n";
+$headers = "From: noreply@trmousou.infinityfree.me\r\n";
+$headers .= "Reply-To: $email\r\n";
 
 if (mail($to, $subject, $body, $headers)) {
     echo "Thank you for your message. We will get back to you soon.";
