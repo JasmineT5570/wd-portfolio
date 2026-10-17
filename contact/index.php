@@ -10,6 +10,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
         <div class="container">
             <form action="https://splitforms.com/api/submit" method="post">
                 <input type="hidden" name="access_key" value="451a4da2c5db4539971b5534572323f0">
+                <input type="hidden" name="redirect" value="thank-you.php">
 
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your first name">
