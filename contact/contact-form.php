@@ -18,13 +18,13 @@ if (!$firstname || !$lastname || !$email || !$comments) {
     exit("Please fill in all required fields.");
 }
 
-$to = "trmousou@gmail.com";
-$subject = "Art Website - Contact Form Submission [$firstname $lastname]";
+$to = "jthao5570@gmail.com";
+$subject = "Web Development - Contact Form Submission [$firstname $lastname]";
 $body = "First Name: $firstname $lastname\n"
                     . "Email: $email\n\n"
                     . "Comments:\n$comments\n"; 
 
-$headers = "From: noreply@trmousou.infinityfree.me\r\n";
+$headers = "From: noreply@jthao.infinityfree.me\r\n";
 $headers .= "Reply-To: $email\r\n";
 
 if (mail($to, $subject, $body, $headers)) {
