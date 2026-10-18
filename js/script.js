@@ -1,131 +1,121 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const textElement = document.querySelector(".fade-text");
+const contactForm = document.querySelector("form");
+const firstName = document.getElementById("fname");
+const lastName = document.getElementById("lname");
+const email = document.getElementById("email");
+const comments = document.getElementById("comments");
 
-  document.querySelectorAll(".fade-text").forEach(el => {
-    el.classList.add("visible");
-  });
+if (!contactForm || !firstName || !lastName) {
+  return;
+}
 
+const styleInvalid = (field) => {
+  field.style.border = "2px solid red";
+  field.style.backgroundColor = "#ffd6d6";
+  field.setAttribute("aria-invalid", "true");
+};
 
+const styleValid = (field) => {
+  field.style.border = "1px solid #ccc";
+  field.style.backgroundColor = "white";
+  field.removeAttribute("aria-invalid");
+};
 
-  const contactForm = document.querySelector("form");
-  const firstName = document.getElementById("fname");
-  const lastName = document.getElementById("lname");
-  const email = document.getElementById("email");
-  const subject = document.getElementById("subject");
+const validateNameField = (field) => {
+  const value = field.value.trim();
+  const validName = /^\p{L}[\p{L}\p{M}' -]*\p{L}$|^\p{L}$/u;
 
-  if (!contactForm || !firstName || !lastName) {
-    return;
+  if (!validName.test(value)) {
+    styleInvalid(field);
+    return false;
   }
 
-  const styleInvalid = (field) => {
-    field.style.border = "2px solid red";
-    field.style.backgroundColor = "#ffd6d6";
-    field.setAttribute("aria-invalid", "true");
-  };
+  styleValid(field);
+  return true;
+};
 
-  const styleValid = (field) => {
-    field.style.border = "1px solid #ccc";
-    field.style.backgroundColor = "white";
-    field.removeAttribute("aria-invalid");
-  };
+const validateRequiredTextField = (field) => {
+  if (!field || field.value.trim() === "") {
+    return false;
+  }
 
-  const validateNameField = (field) => {
-    const value = field.value.trim();
-    const hasNumbers = /\d/.test(value);
+  return true;
+};
 
-    if (value === "" || hasNumbers) {
-      styleInvalid(field);
-      return false;
-    }
+const validateForm = (event) => {
+  let isValid = true;
 
-    styleValid(field);
-    return true;
-  };
+  if (!validateNameField(firstName)) {
+    isValid = false;
+  }
 
-  const validateRequiredTextField = (field) => {
-    if (!field || field.value.trim() === "") {
-      return false;
-    }
+  if (!validateNameField(lastName)) {
+    isValid = false;
+  }
 
-    return true;
-  };
+  if (email && email.value.trim() === "") {
+    styleInvalid(email);
+    isValid = false;
+  } else if (email) {
+    styleValid(email);
+  }
 
-  const validateForm = (event) => {
-    let isValid = true;
+  if (comments && comments.value.trim() === "") {
+    styleInvalid(comments);
+    isValid = false;
+  } else if (comments) {
+    styleValid(comments);
+  }
 
-    if (!validateNameField(firstName)) {
-      isValid = false;
-    }
+  if (!isValid && event) {
+    event.preventDefault();
+  }
 
-    if (!validateNameField(lastName)) {
-      isValid = false;
-    }
+  return isValid;
+};
 
-    if (email && email.value.trim() === "") {
+firstName.addEventListener("blur", () => validateNameField(firstName));
+firstName.addEventListener("input", () => validateNameField(firstName));
+
+lastName.addEventListener("blur", () => validateNameField(lastName));
+lastName.addEventListener("input", () => validateNameField(lastName));
+
+if (email) {
+  email.addEventListener("blur", () => {
+    if (email.value.trim() === "") {
       styleInvalid(email);
-      isValid = false;
-    } else if (email) {
+    } else {
       styleValid(email);
     }
-
-    if (subject && subject.value.trim() === "") {
-      styleInvalid(subject);
-      isValid = false;
-    } else if (subject) {
-      styleValid(subject);
-    }
-
-    if (!isValid && event) {
-      event.preventDefault();
-    }
-
-    return isValid;
-  };
-
-  firstName.addEventListener("blur", () => validateNameField(firstName));
-  firstName.addEventListener("input", () => validateNameField(firstName));
-
-  lastName.addEventListener("blur", () => validateNameField(lastName));
-  lastName.addEventListener("input", () => validateNameField(lastName));
-
-  if (email) {
-    email.addEventListener("blur", () => {
-      if (email.value.trim() === "") {
-        styleInvalid(email);
-      } else {
-        styleValid(email);
-      }
-    });
-
-    email.addEventListener("input", () => {
-      if (email.value.trim() === "") {
-        styleInvalid(email);
-      } else {
-        styleValid(email);
-      }
-    });
-  }
-
-  if (subject) {
-    subject.addEventListener("blur", () => {
-      if (subject.value.trim() === "") {
-        styleInvalid(subject);
-      } else {
-        styleValid(subject);
-      }
-    });
-
-    subject.addEventListener("input", () => {
-      if (subject.value.trim() === "") {
-        styleInvalid(subject);
-      } else {
-        styleValid(subject);
-      }
-    });
-  }
-
-  contactForm.addEventListener("submit", (event) => {
-    validateForm(event);
   });
+
+  email.addEventListener("input", () => {
+    if (email.value.trim() === "") {
+      styleInvalid(email);
+    } else {
+      styleValid(email);
+    }
+  });
+}
+
+if (comments) {
+  comments.addEventListener("blur", () => {
+    if (comments.value.trim() === "") {
+      styleInvalid(comments);
+    } else {
+      styleValid(comments);
+    }
+  });
+
+  comments.addEventListener("input", () => {
+    if (comments.value.trim() === "") {
+      styleInvalid(comments);
+    } else {
+      styleValid(comments);
+    }
+  });
+}
+
+contactForm.addEventListener("submit", (event) => {
+  validateForm(event);
 });
 
