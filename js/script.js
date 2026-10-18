@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const contactForm = document.querySelector("form");
 const firstName = document.getElementById("fname");
 const lastName = document.getElementById("lname");
@@ -118,4 +120,4 @@ if (comments) {
 contactForm.addEventListener("submit", (event) => {
   validateForm(event);
 });
-
+});
