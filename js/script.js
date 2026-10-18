@@ -35,14 +35,6 @@ const validateNameField = (field) => {
   return true;
 };
 
-const validateRequiredTextField = (field) => {
-  if (!field || field.value.trim() === "") {
-    return false;
-  }
-
-  return true;
-};
-
 const validateForm = (event) => {
   let isValid = true;
 
