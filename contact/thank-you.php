@@ -7,10 +7,10 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
 ?>
 
     <main>
-        <div class="container">
+        <div class="container ty-container">
             <h1>Thank You!</h1>
             <p>Your message has been successfully sent. We will get back to you soon.</p>
-            <p><a href="../index.php">Back to home</a></p>
+            <a href="../index.php"><button class="ty-button">Back to home</button></a>
         </div>
     </main>
 
