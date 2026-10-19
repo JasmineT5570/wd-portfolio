@@ -20,7 +20,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="email@example.com">
 
-                <label for="comments">Subject</label>
+                <label for="comments">Comments</label>
                 <textarea id="comments" name="comments" placeholder="Comments"></textarea>
 
                 <input type="submit" value="Submit">
