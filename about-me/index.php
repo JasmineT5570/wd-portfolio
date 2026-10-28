@@ -2,6 +2,8 @@
 
 $hero_caption = "Hi, I'm Jasmine Thao.";
 
+$hero_class = "hero-about";
+
 include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); 
 
 ?>

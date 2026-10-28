@@ -2,12 +2,14 @@
 
 $hero_caption = "Website by Jasmine Thao";
 
+$hero_class = "";
+
 include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); 
 
 ?>
 
     <main>
-<?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/cards.php"); ?>
+    <p>content</p>
     </main>
 
 <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/footer.php"); ?>

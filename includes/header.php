@@ -70,7 +70,6 @@ else {
     $file_name = preg_replace("/^\d+-/", "", $file_name);
     $file_name = ucwords(str_replace("-", " ", $file_name));
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -87,12 +86,12 @@ else {
     <title> Jasmine | <?= $folder_name ?> </title>
 </head>
 
-<body id="top">
+<body id="top" class="<?= $hero_class ?>">
     <div class="wrapper">
         <header>
             <nav>
                 <ul>
-                    <li><a href="/index.php">logo</a></li>
+                    <li><a href="/index.php">jasmine thao</a></li>
                     <li><a href="/index.php">home</a></li>
                     <li><a href="/portfolio/index.php">portfolio</a></li>
                     <li><a href="/about-me/index.php">about me</a></li>
@@ -102,8 +101,8 @@ else {
 
             <section class="hero">
                 <div class="hero-overlay">
-                    <h1 class="fade-text"><?= $folder_name ?></h1>
-                    <p class="fade-text"><?= $hero_caption ?></p>
+                    <h1><?= $folder_name ?></h1>
+                    <p><?= $hero_caption ?></p>
                 </div>
             </section>
         </header>

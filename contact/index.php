@@ -2,6 +2,8 @@
 
 $hero_caption = "Fill out the form below to contact me.";
 
+$hero_class = "hero-contact";
+
 include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php"); 
 
 ?>

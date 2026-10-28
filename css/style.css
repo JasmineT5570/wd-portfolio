@@ -74,11 +74,22 @@ body {
 .hero {
     position: relative;
     min-height: 400px;
-    background: url("/css/images/hero.webp") center / cover no-repeat;
-    background-color: lightgray;
+    background: lightcoral;
     display: flex;
     align-items: center;
     padding: 60px 5%;
+}
+
+.hero-contact .hero {
+    background: url("/css/images/contact-hero.webp") center / cover no-repeat;
+}
+
+.hero-about .hero {
+    background: lightgoldenrodyellow;
+}
+
+.hero-portfolio .hero {
+    background: lightskyblue
 }
 
 .hero-overlay {
@@ -292,7 +303,7 @@ a:active {
 } 
     
 .container {
-    margin: 0 20em;
+    margin: 0 15em;
 }
     
 nav ul {
