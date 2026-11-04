@@ -12,9 +12,9 @@ html {
 }
 
 :root {
-    --blue-dark: oklch(28.343% 0.0427 266.701);
-    --blue-normal: oklch(44.291% 0.18106 262.657);
-    --blue-light: oklch(88.48% 0.05882 249.315);
+    --blue-dark: oklch(17.8% 0.068 278.2);
+    --blue-normal: oklch(43.1% 0.171 275);
+    --blue-light: oklch(79.9% 0.095 259.4);
 
     --black: #1e1e1f;
 }
@@ -65,7 +65,7 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     margin: 0 auto;
-    background-color: gray;
+    background-color: var(--blue-light);
 }
 
 
@@ -81,7 +81,7 @@ body {
 }
 
 .hero-contact .hero {
-    background: url("/css/images/contact-hero.webp") center / cover no-repeat;
+    background: var(--blue-normal);
 }
 
 .hero-about .hero {
@@ -117,10 +117,16 @@ nav {
     text-transform: capitalize;
     background-color: var(--black);
     color: white;
-    padding: 1em;
 
     a:link {
         text-decoration: none;
+    }
+
+    img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 }
 
