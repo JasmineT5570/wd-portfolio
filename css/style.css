@@ -81,7 +81,7 @@ body {
 }
 
 .hero-contact .hero {
-    background: var(--blue-normal);
+    background: lightgreen;
 }
 
 .hero-about .hero {
@@ -144,6 +144,10 @@ main {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.home-main, .portfolio-main, .about-main {
+    flex-direction: column;
 }
 
 .card {
@@ -222,8 +226,16 @@ footer {
 }
 
 /*CONTACT FORM CSS*/
+.contact-main {
+    flex-direction: column;
+}
+
+.contact-info {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .container {
-    width: 100%;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;

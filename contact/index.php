@@ -8,7 +8,13 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
 
 ?>
 
-    <main>
+    <main class="contact-main">
+        <div class="contact-info">
+            <h2>Email and Phone</h2>
+            <p><a href="mailto:JasmineT5570@gmail.com">JasmineT5570@gmail.com</a></p>
+            <p><a href="tel:+19203709409">+1 (920) 370-9409</a></p>
+        </div>
+
         <div class="container">
             <form action="https://splitforms.com/api/submit" method="post">
                 <input type="hidden" name="access_key" value="451a4da2c5db4539971b5534572323f0">

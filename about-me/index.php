@@ -8,17 +8,12 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
 
 ?>
 
-    <main>
-        <div>
-            <section>
-                <h2>About me</h2>
-                    <p>I'm a student in Northeast Wisconsin Technical College's (NWTC)
-                    Web Development program.</p>
-            </section>
+    <main class="about-main">
+        <h2>About me</h2>
+            <p>I'm a student in Northeast Wisconsin Technical College's (NWTC)
+            Web Development program.</p>
 
-        <section>
         <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/cards.php"); ?>
-        </section>
 
         </div>
     </main>

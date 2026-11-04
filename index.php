@@ -8,9 +8,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
 
 ?>
 
-    <main>
-    <div class="home-content">
-
+    <main class="home-main">
         <section>
         <h2>Hi, I'm Jasmine</h2>
             <p>I'm a student at Northeast Wisconsin Technical College (NWTC). I specialize 
@@ -45,7 +43,6 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
                     <li>(Add more)</li>
                 </ul>
         </section>
-    </div>
     </main>
 
 <?php include("{$_SERVER["DOCUMENT_ROOT"]}/includes/footer.php"); ?>
