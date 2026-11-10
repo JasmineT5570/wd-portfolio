@@ -74,7 +74,8 @@ body {
 .hero {
     position: relative;
     min-height: 400px;
-    background: lightcoral;
+    background: url(/css/images/hero-bg.png);
+    background-size: cover;
     display: flex;
     align-items: center;
     padding: 60px 5%;
@@ -158,23 +159,36 @@ main {
 .home-main {
     section {
     padding: 20px;
-    min-height: 300px;
+    min-height: 400px;
+    background: var(--blue-dark);
+    color: whitesmoke;
     }
 
     ul {
         width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style-type: none;
     }
 
     p {
         text-align: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .home-main section:nth-child(2) {
-  background-color: lightgreen;
+  background-color: var(--blue-normal);
+}
+
+.section-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .portfolio-main, .about-main, .contact-main {

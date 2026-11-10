@@ -9,7 +9,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
 ?>
 
     <main class="home-main">
-        <section>
+        <section class="section-flex">
         <h2>Hi, I'm Jasmine</h2>
             <p>I'm a student at Northeast Wisconsin Technical College (NWTC). I specialize 
             in web development and design. Throughout this program, I've learned just how
@@ -18,7 +18,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
             to see a website come to life.</p>
         </section>
 
-        <section>
+        <section class="section-flex">
         <h2>Skills</h2>
         <ul>
             <li>HTML</li>
@@ -29,7 +29,7 @@ include("{$_SERVER["DOCUMENT_ROOT"]}/includes/header.php");
         </ul>
         </section>
 
-        <section>
+        <section class="section-flex">
             <h2>Courses</h2>
                 <ul>
                     <li>Website Coding</li>
